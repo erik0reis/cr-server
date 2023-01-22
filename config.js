@@ -1,7 +1,7 @@
 module.exports = {
     content: {
-        version: '3.690.1',
-        host: '0.0.0.0:8448', //use ngrok or other tunneler at port 8448 and put the generated url here, redo this step if patching stoped working
+        sha: '33f133cf15b944658f041a533cf1f48f27262076',
+        host: 'http://192.168.43.154/Patchs/',
         port: '8080'
     },
     db: {
@@ -13,7 +13,7 @@ module.exports = {
         port: 6379
     },
     network: {
-        maxConnections: 1000
+        maxConnections: 20
     },
     events: [
         {

@@ -1,6 +1,4 @@
 const net = require('net')
-const express = require('express')
-var contentserver = express();
 const chalk = require('chalk')
 const Packetizer = require('./services/network/packetizer')
 const Session = require('./packets/Session')
@@ -14,10 +12,6 @@ require('./db')
 require('./services/http')
 
 const server = new net.Server()
-
-contentserver.use('/', express.static(__dirname + '/patch'));
-
-contentserver.listen(8448, () => { console.log('patch server started at port 8448')})
 
 fs.readdir('./packets/client', (err, files) => {
     files.forEach(file => {
